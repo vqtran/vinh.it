@@ -1,6 +1,7 @@
 var express = require('express');
 var engine = require('ejs-locals');
-var sass = require('./app/util/sass-build.js');
+var fs = require('fs');
+var sass = require('./app/sass-build.js');
 var error = require('./app/util/error.js');
 
 var app = express();
@@ -16,10 +17,14 @@ app.use(error.logErrors);
 app.use(error.clientErrorHandler);
 app.use(error.errorHandler);
 
-var message = "hello world";
-
 app.get('/', function(req, res) {
-    res.render('index', {message: message});
+    res.render('index');
+});
+
+app.get('/post/:id', function(req, res) {
+    fs.readFile('posts/' + req.params.id + '.ejs', function (err, post) {
+        res.render('post', {post: post});
+    });
 });
 
 var port = process.env.PORT || 8080;

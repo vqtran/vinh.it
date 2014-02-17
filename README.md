@@ -1,4 +1,4 @@
 vinh.it
 =======
 
-Personal landing page and blog.
+Personal landing page and blog. Still in development.
