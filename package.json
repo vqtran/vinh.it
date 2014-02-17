@@ -1,0 +1,13 @@
+{
+  "name": "vinh.it",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "3.x.x",
+    "ejs-locals": "*",
+    "node-sass":"*"
+  },
+  "engines": {
+    "node": "0.11.x",
+    "npm": "1.3.x"
+  }
+}
