@@ -1,18 +1,19 @@
 var express = require('express');
 var engine = require('ejs-locals');
-var lessMiddleware = require('less-middleware');
-var fs = require('fs');
+var assets = require('connect-assets');
 var error = require('./app/util/error.js');
+var fs = require('fs');
 
 var app = express();
 
 app.configure(function () {
-    var less = lessMiddleware({
-                dest: __dirname + '/public',
-                src: __dirname + '/assets',
-                yuicompress: true
-            });
-    app.use(less);
+    var config = {
+        paths: ['assets/stylesheets', 'assets/javascripts'],
+        buildDir: 'public/assets',
+        build: { dev: true, prod: true },
+        compress: { dev: true, prod: true }
+    };
+    app.use(assets(config));
     app.engine('ejs', engine);
     app.set('view engine', 'ejs');
     app.use('/', express.static(__dirname + '/public'));

@@ -1,0 +1,26 @@
+{
+  "assets": {
+    "app.css": "app-dbc31056faec2e4f2b939de863cbce1e.css",
+    "bootstrap.js": "bootstrap-346bea6e4b01a73fca5e759e43e19933.js"
+  },
+  "files": {
+    "app-383f91f331f1cab6b4e39b6aa092c5c0.css": {
+      "logical_path": "app.css",
+      "mtime": "2014-02-21T18:25:36.000Z",
+      "size": 19,
+      "digest": "383f91f331f1cab6b4e39b6aa092c5c0"
+    },
+    "bootstrap-346bea6e4b01a73fca5e759e43e19933.js": {
+      "logical_path": "bootstrap.js",
+      "mtime": "2014-02-21T17:35:51.000Z",
+      "size": 29759,
+      "digest": "346bea6e4b01a73fca5e759e43e19933"
+    },
+    "app-dbc31056faec2e4f2b939de863cbce1e.css": {
+      "logical_path": "app.css",
+      "mtime": "2014-02-21T19:46:39.000Z",
+      "size": 1577,
+      "digest": "dbc31056faec2e4f2b939de863cbce1e"
+    }
+  }
+}

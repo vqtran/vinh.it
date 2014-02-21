@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "dependencies": {
     "express": "3.x.x",
-    "ejs-locals": "*",
-    "less-middleware": "*"
+    "connect-assets": "3.x.x",
+    "uglify-js": "*",
+    "csso": "*",
+    "less": "*",
+    "ejs": "*",
+    "ejs-locals": "*"
   },
   "engines": {
     "node": "0.11.x",
