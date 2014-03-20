@@ -8,7 +8,8 @@
     "csso": "*",
     "less": "*",
     "ejs": "*",
-    "ejs-locals": "*"
+    "ejs-locals": "*",
+    "controllers-js": "*"
   },
   "engines": {
     "node": "0.11.x",

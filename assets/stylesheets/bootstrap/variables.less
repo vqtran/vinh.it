@@ -38,8 +38,19 @@
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
+@font-face {
+   font-family: Gaspar;
+   src: url("/fonts/Gaspar_Regular.otf") format("opentype");
+}
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-face {
+   font-family: Gaspar;
+   font-weight: bold;
+   src: url("/fonts/Gaspar_Bold.otf") format("opentype");
+}
+
+
+@font-family-sans-serif:  Gaspar, Quicksand, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
