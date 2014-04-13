@@ -1,6 +1,6 @@
 /* Modified from http://tympanus.net/codrops/2013/05/07/a-collection-of-page-transitions/ */
 
-//= require ./modernizr.custom
+//= require transitions/modernizr.custom.js
 
 var PageTransitions = (function() {
    var $main = $( '#pt-main' ),
