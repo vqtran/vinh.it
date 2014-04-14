@@ -5,6 +5,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 a:hover {
@@ -48,10 +49,9 @@ a:hover {
 
 #github-icon {
    background-image: url("/images/github.png");
-   transition: background-image 0.3s ease;
+   transition: background-image 0.5s ease;
    &:hover {
       background-image: url("/images/github_orange.png");
-      transition: background-image 0.3s ease;
    }
 }
 
@@ -60,7 +60,6 @@ a:hover {
    transition: background-image 0.5s ease;
    &:hover {
       background-image: url("/images/linkedin_blue.png");
-      transition: background-image 0.5s ease;
    }
 }
 
@@ -69,7 +68,6 @@ a:hover {
    transition: background-image 0.5s ease;
    &:hover {
       background-image: url("/images/doc_green.png");
-      transition: background-image 0.5s ease;
    }
 }
 
@@ -84,4 +82,37 @@ a:hover {
    width: 100%;
    position: relative;
    top: -1*@bar-height;
+}
+
+.chevron {
+   position: absolute;
+   width: 80px;
+   height: 80px;
+   top: 50%;
+   background-image: url("/images/chevron.png");
+   background-size: cover;
+   background-position:center;
+   z-index: 10000;
+   transition: opacity 0.5s ease;
+   &:hover {
+      opacity: 0.8;
+   }
+}
+
+.next {
+   right: 10px;
+}
+
+.back {
+   -moz-transform: scaleX(-1);    /* Gecko */
+   -o-transform: scaleX(-1);      /* Operah */
+   -webkit-transform: scaleX(-1); /* webkit */
+   transform: scaleX(-1);         /* standard */
+   filter: FlipH;                 /* IE 6/7/8 */
+   left: 10px;
+   display: none;
+}
+
+a {
+ text-decoration:none !important;
 }

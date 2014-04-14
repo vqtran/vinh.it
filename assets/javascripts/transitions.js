@@ -5,7 +5,8 @@
 var PageTransitions = (function() {
    var $main = $( '#pt-main' ),
       $pages = $main.children( 'div.pt-page' ),
-      $iterate = $("#pt-main"),
+      $back = $('.back'),
+      $next = $('.next'),
       animcursor = 1,
       pagesCount = $pages.length,
       current = 0,
@@ -22,7 +23,7 @@ var PageTransitions = (function() {
       animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
       // support css animations
       support = Modernizr.cssanimations;
-   
+
    function init() {
       $pages.each( function() {
          var $page = $( this );
@@ -31,7 +32,19 @@ var PageTransitions = (function() {
 
       $pages.eq( current ).addClass( 'pt-page-current' );
 
-      $iterate.click(function() {
+      $back.click(function() {
+         if ( isAnimating ) {
+            return false;
+         }
+         nextPage(false);
+         --animcursor;
+         if ( animcursor == 1 ) {
+            $('.back').css('display', 'none');
+            $('.next').css('display', 'block');
+         }
+      });
+
+      $next.click(function() {
          if( isAnimating ) {
             return false;
          }
@@ -40,6 +53,10 @@ var PageTransitions = (function() {
          }
          nextPage( animcursor );
          ++animcursor;
+         if ( animcursor == $pages.length ) {
+            $('.back').css('display', 'block');
+            $('.next').css('display', 'none');
+         }
       });
 
    }

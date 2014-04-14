@@ -6,10 +6,6 @@
     "compression": "*",
     "body-parser": "*",
     "method-override": "*",
-    "connect-assets": "3.x.x",
-    "uglify-js": "*",
-    "csso": "*",
-    "less": "*",
     "ejs": "*",
     "ejs-locals": "*",
     "controllers-js": "*"
