@@ -8,8 +8,11 @@ body {
   overflow: hidden;
 }
 
-a:hover {
-   text-decoration: none;
+a {
+ text-decoration:none !important;
+ &:hover {
+    text-decoration: none !important;
+ }
 }
 
 .landing {
@@ -113,6 +116,29 @@ a:hover {
    display: none;
 }
 
-a {
- text-decoration:none !important;
+#preload-1 {
+   position: absolute;
+   background-image: url("/images/github_orange.png");
+   top: 1000000px;
+   right: 1000000px;
+   width: 100px;
+   height: 100px;
+}
+
+#preload-2 {
+   position: absolute;
+   background-image: url("/images/linkedin_blue.png");
+   top: 1000000px;
+   right: 1000000px;
+   width: 100px;
+   height: 100px;
+}
+
+#preload-3 {
+   position: absolute;
+   background-image: url("/images/doc_green.png");
+   top: 1000000px;
+   right: 1000000px;
+   width: 100px;
+   height: 100px;
 }
