@@ -52,7 +52,13 @@ a {
 
 #github-icon {
    background-image: url("/images/github.png");
+   -webkit-transition: background-image 0.5s ease;
    transition: background-image 0.5s ease;
+
+   &:after {
+      background-image: url("/images/github_orange.png");
+   }
+
    &:hover {
       background-image: url("/images/github_orange.png");
    }
@@ -60,7 +66,13 @@ a {
 
 #linkedin-icon {
    background-image: url("/images/linkedin.png");
+   -webkit-transition: background-image 0.5s ease;
    transition: background-image 0.5s ease;
+
+   &:after {
+      background-image: url("/images/linkedin_blue.png");
+   }
+
    &:hover {
       background-image: url("/images/linkedin_blue.png");
    }
@@ -68,7 +80,13 @@ a {
 
 #resume-icon {
    background-image: url("/images/doc.png");
+   -webkit-transition: background-image 0.5s ease;
    transition: background-image 0.5s ease;
+
+   &:after {
+      background-image: url("/images/doc_green.png");
+   }
+
    &:hover {
       background-image: url("/images/doc_green.png");
    }
@@ -116,29 +134,11 @@ a {
    display: none;
 }
 
-#preload-1 {
-   position: absolute;
-   background-image: url("/images/github_orange.png");
-   top: 1000000px;
-   right: 1000000px;
-   width: 100px;
-   height: 100px;
-}
-
-#preload-2 {
-   position: absolute;
-   background-image: url("/images/linkedin_blue.png");
-   top: 1000000px;
-   right: 1000000px;
-   width: 100px;
-   height: 100px;
-}
-
-#preload-3 {
-   position: absolute;
-   background-image: url("/images/doc_green.png");
-   top: 1000000px;
-   right: 1000000px;
-   width: 100px;
-   height: 100px;
+.no-select {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
